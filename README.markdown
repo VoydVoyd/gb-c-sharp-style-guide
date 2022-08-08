@@ -152,6 +152,7 @@ findPostById
 ### Access Level Modifiers
 
 Access level modifiers should be explicitly defined for classes, methods and member variables.
+If a field needs to be editable in the inspector, use a private, serialized field instead of a public one.
 
 ### Fields & Variables
 
