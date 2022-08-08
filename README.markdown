@@ -22,15 +22,10 @@ This style guide is based on C# and Unity conventions.
   + [Classes](#classes)
   + [Interfaces](#interfaces)
 - [Spacing](#spacing)
-  + [Indentation](#indentation)
   + [Line Length](#line-length)
   + [Vertical Spacing](#vertical-spacing)
 - [Brace Style](#brace-style)
-- [Switch Statements](#switch-statements)
 - [Language](#language)
-- [Copyright Statement](#copyright-statement)
-- [Smiley Face](#smiley-face)
-- [Credit](#credits)
 
 
 ## Nomenclature
@@ -194,6 +189,7 @@ RadialSlider
 ```csharp
 IRadialSlider
 ```
+## Spacing
 
 ### Line Length
 
