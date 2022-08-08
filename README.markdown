@@ -1,10 +1,5 @@
-# The Official raywenderlich.com C# Style Guide
-
-This style guide is different from others you may find, because the focus is
-centered on readability for print and the web. We created this style guide to
-keep the code in our tutorials consistent.  
-
-Our overarching goals are **conciseness**, **readability** and **simplicity**. Also, this guide is written to keep **Unity** in mind. 
+# Ground Bird C# Style Guide
+### Adapted from raywenderlich's style guide.
 
 ## Inspiration
 
@@ -200,54 +195,6 @@ RadialSlider
 IRadialSlider
 ```
 
-## Spacing
-
-Spacing is especially important in raywenderlich.com code, as code needs to be easily readable as part of the tutorial. 
-
-### Indentation
-
-Indentation should be done using **spaces** — never tabs.  
-
-#### Blocks
-
-Indentation for blocks uses **4 spaces** for optimal readability:
-
-**AVOID:**
-
-```csharp
-for (int i = 0; i < 10; i++) 
-{
-  Debug.Log("index=" + i);
-}
-```
-
-**PREFER:**
-
-```csharp
-for (int i = 0; i < 10; i++) 
-{
-    Debug.Log("index=" + i);
-}
-```
-
-#### Line Wraps
-
-Indentation for line wraps should use **4 spaces** (not the default 8):
-
-**AVOID:**
-
-```csharp
-CoolUiWidget widget =
-        someIncrediblyLongExpression(that, reallyWouldNotFit, on, aSingle, line);
-```
-
-**PREFER:**
-
-```csharp
-CoolUiWidget widget =
-    someIncrediblyLongExpression(that, reallyWouldNotFit, on, aSingle, line);
-```
-
 ### Line Length
 
 Lines should be no longer than **100** characters long.
@@ -297,141 +244,18 @@ class MyClass
 }
 ```
 
-Conditional statements are always required to be enclosed with braces,
-irrespective of the number of lines required.
-
-**AVOID:**
-
-```csharp
-if (someTest)
-    doSomething();  
-
-if (someTest) doSomethingElse();
-```
-
-**PREFER:**
-
-```csharp
-if (someTest) 
-{
-    DoSomething();
-}  
-
-if (someTest)
-{
-    DoSomethingElse();
-}
-```
-## Switch Statements
-
-Switch-statements come with `default` case by default (heh). If the `default` case is never reached, be sure to remove it.
-
-**AVOID:**  
-  
-```csharp
-switch (variable) 
-{
-    case 1:
-        break;
-    case 2:
-        break;
-    default:
-        break;
-}
-```
-
-**PREFER:**  
-  
-```csharp
-switch (variable) 
-{
-    case 1:
-        break;
-    case 2:
-        break;
-}
-```
-
 ## Language
 
-Use US English spelling.
+Use Australian English spelling, even when it conflicts with built-in types or plugins made using US spelling.
 
 **AVOID:**
 
 ```csharp
-string colour = "red";
+Color color = Color.red;
 ```
 
 **PREFER:**
 
 ```csharp
-string color = "red";
+Color colour = Color.red;
 ```
-
-The exception here is `MonoBehaviour` as that's what the class is actually called.
-
-## Copyright Statement
-
-The following copyright statement should be included at the top of every source file:
-
-    /*
-     * Copyright (c) 2022 Razeware LLC
-     * 
-     * Permission is hereby granted, free of charge, to any person obtaining a copy
-     * of this software and associated documentation files (the "Software"), to deal
-     * in the Software without restriction, including without limitation the rights
-     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-     * copies of the Software, and to permit persons to whom the Software is
-     * furnished to do so, subject to the following conditions:
-     * 
-     * The above copyright notice and this permission notice shall be included in
-     * all copies or substantial portions of the Software.
-     *
-     * Notwithstanding the foregoing, you may not use, copy, modify, merge, publish, 
-     * distribute, sublicense, create a derivative work, and/or sell copies of the 
-     * Software in any work that is designed, intended, or marketed for pedagogical or 
-     * instructional purposes related to programming, coding, application development, 
-     * or information technology.  Permission for such use, copying, modification,
-     * merger, publication, distribution, sublicensing, creation of derivative works, 
-     * or sale is expressly withheld.
-     *    
-     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-     * THE SOFTWARE.
-     */
-
-In this repository, copy the **ScripTemplates** folder into your own Unity **Assets** folder. This way the header above will be included in new scripts.
-
-> **NOTE**: You may need to close and reopen Unity in order for it to start picking up the template.
-
-## Smiley Face
-
-Smiley faces are a very prominent style feature of the raywenderlich.com site!
-It is very important to have the correct smile signifying the immense amount of happiness and excitement for the coding topic. The closing square bracket ] is used because it represents the largest smile able to be captured using ASCII art. A closing parenthesis ("**:)**") creates a half-hearted smile, and thus is not preferred.
-
-**AVOID**:
-
-:)
-
-**PREFER**:
-
-:]  
-  
-> **NOTE**: Do not use smileys in your scripts.
-
-## Credits
-
-This style guide is a collaborative effort from the most stylish
-raywenderlich.com team members:
-
-- [Darryl Bayliss](https://github.com/DarrylBayliss)
-- [Sam Davies](https://github.com/sammyd)
-- [Mic Pringle](https://github.com/micpringle)
-- [Brian Moakley](https://github.com/VegetarianZombie)
-- [Ray Wenderlich](https://github.com/rwenderlich)
-- [Eric Van de Kerckhove](https://github.com/BlackDragonBE)
-
